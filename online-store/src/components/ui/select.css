@@ -1,0 +1,50 @@
+/* Select */
+
+.select {
+  position: relative;
+  display: inline-block;
+  width: 220px;
+}
+
+.select__list {
+  background-color: #fff;
+  width: 100%;
+  position: absolute;
+  display: none;
+  flex-direction: column;
+  z-index: 1;
+  border: 1px solid #9d9c9c;
+}
+
+.is-open {
+  display: flex;
+}
+
+.select__item {
+  cursor: pointer;
+  padding: 5px 10px;
+}
+
+.select__item:hover {
+  background-color: #f79e02;
+}
+
+.select__placeholder {
+  cursor: pointer;
+  padding: 5px 10px;
+  padding-right: 25px;
+  position: relative;
+  border: 1px solid #9d9c9c;
+}
+
+.select__placeholder::after {
+  position: absolute;
+  content: '';
+  right: 5px;
+  top: 8px;
+  height: 12px;
+  width: 12px;
+  background-image: url(../../assets/img/icon/arrow_down.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+}

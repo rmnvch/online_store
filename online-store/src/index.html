@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>online-store</title>
+  <link rel="stylesheet" href="./global.css">
+</head>
+<body>
+  <header class="header">
+    <div class="header__wrapper container">
+      <div class="header__logo">
+        <a href="">
+          <img src="./assets/img/logo4.svg" alt="Logo">
+        </a>
+      </div>
+      <form class="header__form">
+        <label>
+          <span class="header__search-icon" ></span>
+          <input type="text" class="header__input" placeholder="Search">
+          <span class="header__search-close"></span>
+        </label>
+      </form>
+      <div class="header__cart">
+        <span class="header__cart-icon">
+          <span class="header__cart-qty"></span>
+        </span>
+      </div>
+    </div>
+  </header>
+  <main class="catalogue container">
+    <div class="catalogue__filter filter">
+      <div class="filter__header">
+        <h2 class="filter__title">FILTERS</h2>
+        <button class="filter__reset text-grey">Reset all</button>
+      </div>
+      <div class="filter__brand">
+        <h3 class="filter__type">Brand:</h3>
+        <div class="filter__brand-list">
+          <div class="filter__brand-item">
+            <button data-brand="Fender" class="filter__brand-btn filter__brand-btn--fender"></button>
+          </div>
+          <div class="filter__brand-item">
+            <button data-brand="Gibson" class="filter__brand-btn filter__brand-btn--gibson"></button>
+          </div>
+          <div class="filter__brand-item">
+            <button data-brand="Gretsch" class="filter__brand-btn filter__brand-btn--gretsch"></button>
+          </div>
+          <div class="filter__brand-item">
+            <button data-brand="Other" class="filter__brand-btn filter__brand-btn--other">Other Brands</button>
+          </div>
+        </div>
+      </div>
+      <div class="filter__guitar-type">
+        <h3 class="filter__type">Type:</h3>
+        <div class="filter__checkbox checkbox">
+          <label class="checkbox__label">
+            <input class="checkbox-hidden" type="checkbox" data-type="electric">
+            <span class="checkbox__custom"></span>
+            Electric
+          </label>
+        </div>
+        <div class="filter__checkbox checkbox">
+          <label class="checkbox__label">
+            <input class="checkbox-hidden" type="checkbox" data-type="bass">
+            <span class="checkbox__custom"></span>
+            Bass
+          </label>
+        </div>
+        <div class="filter__checkbox checkbox">
+          <label class="checkbox__label">
+            <input class="checkbox-hidden" type="checkbox" data-type="acoustic">
+            <span class="checkbox__custom"></span>
+            Acoustic
+          </label>
+        </div>
+      </div>
+      <div class="filter__in-stock in-stock">
+        <h3 class="filter__type in-stock__titile">Availability:</h3>
+        <input name="option" type="radio" id="all" class="in-stock__hide" checked>
+        <label class="in-stock__label" for="all">All</label>
+        <input name="option" type="radio" id="unique" class="in-stock__hide">
+        <label class="in-stock__label" for="unique">Unique</label>
+        <input name="option" type="radio" id="stock" class="in-stock__hide">
+        <label class="in-stock__label" for="stock">In Stock</label>
+      </div>
+      <div class="filter__year">
+        <h3>Year:</h3> 
+        <div id="slider-year"></div>         
+      </div>
+      <div class="filter__price">
+        <h3>Price:</h3>
+        <div id="slider-price"></div>          
+      </div>
+      <div class="filter__default">
+        <button class="filter__default-btn text-grey">Default settings</button>
+      </div>
+    </div>
+    <div id="gallery" class="catalogue__gallery gallery">
+      <div class="gallery__banner">
+        <h1 class="gallery__title">FEATURED GEAR</h1>
+      </div>
+      <div class="gallery__info">
+        <div class="gallery__results">
+          <span class="text-grey">Results: </span>
+          <span class="results-display"></span>
+        </div>
+        <div class="gallery__sort">
+          <span class="gallery__sort-label text-grey">Sort by:</span>
+          <div class="select">
+            <div data-placeholder="high-low" class="select__placeholder"> Price, Highest ... Lowest </div>
+            <div class="select__list">
+              <span data-sort="a-z" class="select__item">Brand, A ... Z</span>
+              <span data-sort="z-a" class="select__item">Brand, Z ... A</span>
+              <span data-sort="low-high" class="select__item">Price, Lowest ... Highest</span>
+              <span data-sort="high-low" class="select__item">Price, Highest ... Lowest</span>
+              <span data-sort="old-new" class="select__item">Year, Oldest ... Newest</span>
+              <span data-sort="new-old" class="select__item">Year, Newest ... Oldest</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="gallery__list">
+        
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer__wrapper container">
+      <div class="footer__logo">
+          <a href="https://rs.school/js/">
+              <img src="https://rs.school/images/rs_school_js.svg" alt="RSSchool logo">
+          </a>
+      </div>
+      <div class="footer__links">
+          <a href="https://github.com/rolling-scopes-school/rmnvch-JSFE2022Q1" class="footer__github">
+              Anton Romanovich // 2022
+          </a>
+          <a href="https://rs.school/js/" class="footer__rs">Курс «JavaScript/Front-end»</a>
+      </div>
+    </div>
+</footer>
+
+</body>
+</html>
+
+<template id="galleryTemp">
+  <li class="card" id="cardTemp">
+    <img class="card__img" src="./assets//img/guitars/gibsonLP_57_goldtop.webp" alt="Gibson">
+    <div class="card__content">
+      <h4 class="card__name"></h4>
+      <!-- <p class="card__descr">Incredible example of what is considered to be the Holy Grail of solidbody guitars..</p> -->
+      <div class="card__cart">
+        <span class="card__price"></span>
+        <button class="card__add">
+          <span></span>
+          Add to cart
+        </button>
+      </div>
+    </div>
+    <div class="card__type"></div>
+    <div class="card__type card__type--qty"></div>
+  </li>
+</template>
+
+
+!

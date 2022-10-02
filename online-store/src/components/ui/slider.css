@@ -1,0 +1,38 @@
+#slider-fit {
+  padding: 0 16px;
+}
+
+#slider-square {
+  border-radius: 0;
+}
+
+.noUi-handle {
+  border-radius: 0;
+  background: #fff;
+  height: 18px;
+  width: 18px;
+  top: -1px;
+  right: -9px;
+}
+
+.noUi-connect {
+  background-color: #f79e02;
+}
+
+.noUi-horizontal {
+  height: 12px;
+}
+
+.noUi-horizontal .noUi-handle {
+  width: 20px;
+  height: 20px;
+} 
+
+.noUi-handle-upper .noUi-tooltip {
+  bottom: -210%;
+  white-space: break-spaces;
+}
+
+.filter__price .noUi-handle-upper .noUi-tooltip {
+  bottom: -320%;
+}

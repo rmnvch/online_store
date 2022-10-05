@@ -2,6 +2,7 @@
 Private repository for @rmnvch
 <br>
 App link: https://rolling-scopes-school.github.io/rmnvch-JSFE2022Q1/online-store/
+<br> Short video introduction link: https://youtu.be/dB8cRDami58
 <br>This App is an implementation of product list page of a fake online vintage guitar store. App has no backend part all data's stored locally in db.json.
 <br>Key features:
 <ol>
